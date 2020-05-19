@@ -34,14 +34,16 @@ public class Jumper : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        isGrounded = true;
+        if(collision.gameObject.tag == "platform" || collision.gameObject.tag == "wall")
+            isGrounded = true;
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if(collision.gameObject.tag != "wall")
+        if(collision.gameObject.tag != "platform" && collision.gameObject.tag != "wall")
             isGrounded = false;
     }
+
     public void Jump()
     {
         Vector3 up = new Vector3(0, 1f, 0);//transform.TransformDirection(Vector3.up);

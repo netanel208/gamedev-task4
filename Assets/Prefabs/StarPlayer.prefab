@@ -273,3 +273,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 6.5
+  forceSize: 5
+  forceMode: 0
+  isGrounded: 1

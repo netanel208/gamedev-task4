@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] GameObject trackObject;
     [SerializeField] GameObject level1;
     [SerializeField] GameObject level2;
-    //[SerializeField] GameObject level3;
+    [SerializeField] GameObject level3;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +33,10 @@ public class CameraController : MonoBehaviour
         if (Math.Abs(trackObject.transform.position.y - level2.transform.position.y) < 2)
         {
             GameObject.Find("Text").GetComponent<TextMeshProUGUI>().text = "Level 2";
+        }
+        if (Math.Abs(trackObject.transform.position.y - level3.transform.position.y) < 2)
+        {
+            GameObject.Find("Text").GetComponent<TextMeshProUGUI>().text = "Level 3";
         }
     }
 }
